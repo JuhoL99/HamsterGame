@@ -148,9 +148,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   angleMax: 45
-  speedReachMaxAngle: 2
+  speedReachMaxAngle: 6
   hamsterPivot: {fileID: 0}
-  spinning: 0
 --- !u!114 &3339355336661678487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,6 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6411c57a12b01374facbd58a31ca6e66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  freeLookCam: {fileID: 0}
   cameraFollow: {fileID: 0}
   torque: 1000
+  loseControlAngleSpeed: 1
+  regainControlAngleSpeed: 0.5
