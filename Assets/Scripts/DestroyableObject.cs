@@ -34,7 +34,7 @@ public class DestroyableObject : MonoBehaviour
         Debug.Log(playerCaused);
         destroyed = true;
         gameManager.ObjectDestroyed(this.transform);
-        GameObject go = Instantiate(fractured, transform.position, transform.rotation);
+        GameObject go = Instantiate(fractured, transform.position, transform.rotation * Quaternion.Euler(90, 0, 0)); //-90 x rotation from blender
         FracturedObject script = go.GetComponent<FracturedObject>();
         Vector3 explosionPosition = playerCaused ? collision.GetContact(0).otherCollider.transform.position : transform.position;
         script.SetValues(explosionForce, explosionRadius, explosionPosition);
