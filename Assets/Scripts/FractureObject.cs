@@ -22,10 +22,9 @@ public class FracturedObject : MonoBehaviour
     }
     private void Explode()
     {
-        Vector3 explosionPos = transform.position;
         for (int i = 0; i < bodies.Length; i++)
         {
-            bodies[i].AddExplosionForce(explosionForce, explosionPos, explosionRadius);
+            bodies[i].AddExplosionForce(explosionForce, explosionPosition, explosionRadius);
             Destroy(bodies[i].gameObject, Random.Range(destroyTime[0], destroyTime[1]));
         }
         Destroy(this.gameObject, destroyTime[1]);

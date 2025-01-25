@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     [SerializeField] private Transform destructibleParent;
+    [SerializeField] private UnityEvent onDestructibleDestroyed;
     private List<Transform> destructibles = new List<Transform>();
     private int initialCount;
 
@@ -22,7 +24,11 @@ public class GameManager : MonoBehaviour
     }
     public void ObjectDestroyed(Transform _object)
     {
-        if(destructibles.Contains(_object)) destructibles.Remove(_object);
+        if (destructibles.Contains(_object))
+        {
+            destructibles.Remove(_object);
+            onDestructibleDestroyed?.Invoke();
+        }
     }
     public float GetDestructionProgress()
     {
