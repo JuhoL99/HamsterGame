@@ -1,4 +1,5 @@
 using Cinemachine;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
@@ -14,6 +15,8 @@ public class Movement : MonoBehaviour
 
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         cam = Camera.main;
         rb = GetComponent<Rigidbody>();
         hamsterVisuals = GetComponent<HamsterVisuals>();
@@ -42,21 +45,14 @@ public class Movement : MonoBehaviour
         
         if (inputDir.magnitude < 0.01f && angleSpeed > loseControlAngleSpeed && inControl)
         {
-            print("LostControl");
             inControl = false;
             controlLostTimer = controlLostTime;
             hamsterVisuals.StartSpin();
         }
-        /*
-        print(controlLostTimer);
-        print(inputDir.magnitude);
-        print(inControl);
-        print(angleSpeed);*/
         Vector3 rotationAngles = hamsterPivot.rotation.eulerAngles;
         if (controlLostTimer <= 0f && inputDir.magnitude > 0.01f && !inControl && (angleSpeed < regainControlAngleSpeed
             || Quaternion.Angle(Quaternion.Euler(rotationAngles.x, 0, rotationAngles.z), Quaternion.identity) < 45f))
         {
-            print("RegainedControl");
             inControl = true;
             hamsterVisuals.StopSpin();
         }

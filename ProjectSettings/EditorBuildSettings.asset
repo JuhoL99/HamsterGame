@@ -5,10 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Oliver1.unity
     guid: 9f9f0f5f830a1fc478cc174a618d32a7
   - enabled: 0
     path: Assets/Scenes/Juho-1.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/StartMenu.unity
+    guid: 151c5d677fdc3b54d9e05ac3435f8c37
+  - enabled: 1
+    path: Assets/Scenes/Game.unity
+    guid: d11a62a8adb7bc149996cae04b0d171c
   m_configObjects: {}
