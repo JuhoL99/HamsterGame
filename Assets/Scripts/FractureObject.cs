@@ -6,14 +6,16 @@ public class FracturedObject : MonoBehaviour
 {
     private float explosionForce;
     private float explosionRadius;
+    private Vector3 explosionPosition;
     private Vector2 destroyTime = new Vector2(2, 8);
     private Rigidbody[] bodies;
     private void Awake()
     {
         bodies = GetComponentsInChildren<Rigidbody>();
     }
-    public void SetValues(float _explosionForce, float _explosionRadius)
+    public void SetValues(float _explosionForce, float _explosionRadius, Vector3 _explosionPosition)
     {
+        explosionPosition = _explosionPosition;
         explosionForce = _explosionForce;
         explosionRadius = _explosionRadius;
         Explode();

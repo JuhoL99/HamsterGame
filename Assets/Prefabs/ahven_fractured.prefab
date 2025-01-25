@@ -438,6 +438,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a5f3f8df4d347e54ab1236bbc5bf5993, type: 2}
+    - target: {fileID: 6020420369505688342, guid: c25c9adb99270264da8c34d33e47d1e9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 6052369243018845475, guid: c25c9adb99270264da8c34d33e47d1e9,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -5094,7 +5099,7 @@ MeshCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 40960
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
