@@ -545,6 +545,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: playground
       objectReference: {fileID: 0}
+    - target: {fileID: 8364719359535240413, guid: 603a047379a647942ac9ab473ecea070,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9177952710125555303, guid: 603a047379a647942ac9ab473ecea070,
         type: 3}
       propertyPath: m_LocalPosition.x
