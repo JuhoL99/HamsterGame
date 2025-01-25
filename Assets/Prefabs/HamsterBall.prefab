@@ -118,7 +118,7 @@ Rigidbody:
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 1
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -150,6 +150,7 @@ MonoBehaviour:
   angleMax: 45
   speedReachMaxAngle: 2
   hamsterPivot: {fileID: 0}
+  spinning: 0
 --- !u!114 &3339355336661678487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,4 +164,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   freeLookCam: {fileID: 0}
-  acceleration: 20
+  cameraFollow: {fileID: 0}
+  torque: 1000

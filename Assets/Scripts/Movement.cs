@@ -4,6 +4,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public CinemachineFreeLook freeLookCam;
+    public Transform cameraFollow;
     public float torque;
     Rigidbody rb;
     Camera cam;
@@ -12,7 +13,10 @@ public class Movement : MonoBehaviour
         cam = Camera.main;
         rb = GetComponent<Rigidbody>();
     }
-
+    private void LateUpdate()
+    {
+        cameraFollow.position = transform.position;
+    }
     void FixedUpdate()
     {
         Vector2 inputDir = new Vector2(Input.GetAxis("Horizontal"),Input.GetAxis("Vertical"));
@@ -24,6 +28,6 @@ public class Movement : MonoBehaviour
 
         Vector3 moveDir = forward * inputDir.y + right * inputDir.x;
         Vector3 moveTorqueAxis = Vector3.Cross(Vector3.up, moveDir);
-        rb.AddTorque(moveTorqueAxis*Time.fixedDeltaTime*torque);
+        if (moveDir.magnitude > 0.01f) rb.AddTorque(moveTorqueAxis*Time.fixedDeltaTime*torque);
     }
 }
