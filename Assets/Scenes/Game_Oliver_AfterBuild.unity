@@ -524,11 +524,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2116976980637221458, guid: a2302458f88857848935fd88284b31b9,
-        type: 3}
-      propertyPath: m_Volume
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3339355336661678487, guid: a2302458f88857848935fd88284b31b9,
         type: 3}
       propertyPath: cameraFollow
@@ -598,31 +593,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HamsterBall
-      objectReference: {fileID: 0}
-    - target: {fileID: 7127946098815667755, guid: a2302458f88857848935fd88284b31b9,
-        type: 3}
-      propertyPath: m_Pitch
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7127946098815667755, guid: a2302458f88857848935fd88284b31b9,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.622
-      objectReference: {fileID: 0}
-    - target: {fileID: 7127946098815667755, guid: a2302458f88857848935fd88284b31b9,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 6b5deb9e9b131244b8ecf5b4375970a4, type: 3}
-    - target: {fileID: 7127946098815667755, guid: a2302458f88857848935fd88284b31b9,
-        type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7127946098815667755, guid: a2302458f88857848935fd88284b31b9,
-        type: 3}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1671,11 +1641,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4397847238236178073, guid: 784ff1f4ab8a82947bc2b819daeafc13,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.396
-      objectReference: {fileID: 0}
     - target: {fileID: 4465587125374142532, guid: 784ff1f4ab8a82947bc2b819daeafc13,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1822,56 +1787,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 152313917453682535, guid: 624d68c001692784b95469e95e3fcaa0,
-        type: 3}
-      propertyPath: breakSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 0b69c9aeeb415b04692efe48940b7dc4, type: 3}
-    - target: {fileID: 440333454109872064, guid: 624d68c001692784b95469e95e3fcaa0,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -39.67497
-      objectReference: {fileID: 0}
-    - target: {fileID: 852245395129970176, guid: 624d68c001692784b95469e95e3fcaa0,
-        type: 3}
-      propertyPath: breakSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 0b69c9aeeb415b04692efe48940b7dc4, type: 3}
-    - target: {fileID: 1418249531209685445, guid: 624d68c001692784b95469e95e3fcaa0,
-        type: 3}
-      propertyPath: breakSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 0b69c9aeeb415b04692efe48940b7dc4, type: 3}
-    - target: {fileID: 2536372234390980403, guid: 624d68c001692784b95469e95e3fcaa0,
-        type: 3}
-      propertyPath: breakSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 0b69c9aeeb415b04692efe48940b7dc4, type: 3}
-    - target: {fileID: 3065640067868538041, guid: 624d68c001692784b95469e95e3fcaa0,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -43.26
-      objectReference: {fileID: 0}
-    - target: {fileID: 3620405335716604094, guid: 624d68c001692784b95469e95e3fcaa0,
-        type: 3}
-      propertyPath: breakSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 0b69c9aeeb415b04692efe48940b7dc4, type: 3}
-    - target: {fileID: 3914010699885499454, guid: 624d68c001692784b95469e95e3fcaa0,
-        type: 3}
-      propertyPath: breakSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 0b69c9aeeb415b04692efe48940b7dc4, type: 3}
-    - target: {fileID: 4155983234382420010, guid: 624d68c001692784b95469e95e3fcaa0,
-        type: 3}
-      propertyPath: breakSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 0b69c9aeeb415b04692efe48940b7dc4, type: 3}
-    - target: {fileID: 4317229167763716978, guid: 624d68c001692784b95469e95e3fcaa0,
-        type: 3}
-      propertyPath: breakSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 0b69c9aeeb415b04692efe48940b7dc4, type: 3}
     - target: {fileID: 4865298687311126040, guid: 624d68c001692784b95469e95e3fcaa0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1922,86 +1837,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4921273032949331018, guid: 624d68c001692784b95469e95e3fcaa0,
-        type: 3}
-      propertyPath: breakSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 0b69c9aeeb415b04692efe48940b7dc4, type: 3}
-    - target: {fileID: 5524294287649481242, guid: 624d68c001692784b95469e95e3fcaa0,
-        type: 3}
-      propertyPath: breakSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 0b69c9aeeb415b04692efe48940b7dc4, type: 3}
-    - target: {fileID: 5951491617190098042, guid: 624d68c001692784b95469e95e3fcaa0,
-        type: 3}
-      propertyPath: breakSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 0b69c9aeeb415b04692efe48940b7dc4, type: 3}
-    - target: {fileID: 6041285221870428937, guid: 624d68c001692784b95469e95e3fcaa0,
-        type: 3}
-      propertyPath: breakSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 0b69c9aeeb415b04692efe48940b7dc4, type: 3}
-    - target: {fileID: 6674556513159527114, guid: 624d68c001692784b95469e95e3fcaa0,
-        type: 3}
-      propertyPath: breakSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 0b69c9aeeb415b04692efe48940b7dc4, type: 3}
-    - target: {fileID: 6710528542808489984, guid: 624d68c001692784b95469e95e3fcaa0,
-        type: 3}
-      propertyPath: breakSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 0b69c9aeeb415b04692efe48940b7dc4, type: 3}
     - target: {fileID: 7436565424544509830, guid: 624d68c001692784b95469e95e3fcaa0,
         type: 3}
       propertyPath: m_Name
       value: DestructibleParent
       objectReference: {fileID: 0}
-    - target: {fileID: 7436565424544509830, guid: 624d68c001692784b95469e95e3fcaa0,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7525229732135895230, guid: 624d68c001692784b95469e95e3fcaa0,
-        type: 3}
-      propertyPath: breakSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 0b69c9aeeb415b04692efe48940b7dc4, type: 3}
-    - target: {fileID: 7556169535059250995, guid: 624d68c001692784b95469e95e3fcaa0,
-        type: 3}
-      propertyPath: breakSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 0b69c9aeeb415b04692efe48940b7dc4, type: 3}
-    - target: {fileID: 7947594119311740646, guid: 624d68c001692784b95469e95e3fcaa0,
-        type: 3}
-      propertyPath: breakSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 0b69c9aeeb415b04692efe48940b7dc4, type: 3}
-    - target: {fileID: 8566308309829153829, guid: 624d68c001692784b95469e95e3fcaa0,
-        type: 3}
-      propertyPath: breakSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 0b69c9aeeb415b04692efe48940b7dc4, type: 3}
-    - target: {fileID: 8719170644304821093, guid: 624d68c001692784b95469e95e3fcaa0,
-        type: 3}
-      propertyPath: breakSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 0b69c9aeeb415b04692efe48940b7dc4, type: 3}
-    - target: {fileID: 8969297327031473918, guid: 624d68c001692784b95469e95e3fcaa0,
-        type: 3}
-      propertyPath: breakSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 0b69c9aeeb415b04692efe48940b7dc4, type: 3}
-    - target: {fileID: 8978459159670734247, guid: 624d68c001692784b95469e95e3fcaa0,
-        type: 3}
-      propertyPath: breakSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 0b69c9aeeb415b04692efe48940b7dc4, type: 3}
-    - target: {fileID: 9183346791294031648, guid: 624d68c001692784b95469e95e3fcaa0,
-        type: 3}
-      propertyPath: breakSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 0b69c9aeeb415b04692efe48940b7dc4, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
