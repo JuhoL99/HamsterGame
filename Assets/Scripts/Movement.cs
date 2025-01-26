@@ -15,6 +15,8 @@ public class Movement : MonoBehaviour
     Vector3 origPos;
     private bool onGround;
     AudioSource jumpAudio;
+    AudioSource collideAudio;
+
 
     void Start()
     {
@@ -28,6 +30,7 @@ public class Movement : MonoBehaviour
 
         AudioSource[] audioSources = GetComponents<AudioSource>();
         jumpAudio = audioSources[1];
+        collideAudio = audioSources[2];
     }
     private void LateUpdate()
     {
@@ -85,5 +88,12 @@ public class Movement : MonoBehaviour
         Vector3 moveTorqueAxis = Vector3.Cross(Vector3.up, moveDir);
         if (moveDir.magnitude > 0.01f) rb.AddTorque(moveTorqueAxis*Time.fixedDeltaTime*torque);
     }
-    
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.relativeVelocity.magnitude > 4f)
+        {
+            collideAudio.Play();
+
+        }
+    }
 }

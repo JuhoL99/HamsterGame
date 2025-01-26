@@ -108,6 +108,7 @@ MonoBehaviour:
   explosionForce: 100
   explosionRadius: 10
   breakVelocity: 10
+  breakSound: {fileID: 0}
 --- !u!64 &6979293699745918553
 MeshCollider:
   m_ObjectHideFlags: 0

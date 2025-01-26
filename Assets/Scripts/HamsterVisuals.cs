@@ -36,7 +36,7 @@ public class HamsterVisuals : MonoBehaviour
         if (horiAngleSpeed > 0.3)
         {
             rollAudio.UnPause();
-            rollAudio.volume = Mathf.InverseLerp(0.3f, 12f, horiAngleSpeed);
+            rollAudio.volume = Mathf.InverseLerp(0.3f, 10f, horiAngleSpeed);
         }
         else
         {

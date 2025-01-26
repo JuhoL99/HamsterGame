@@ -9,9 +9,12 @@ public class FracturedObject : MonoBehaviour
     private Vector3 explosionPosition;
     private Vector2 destroyTime = new Vector2(2, 8);
     private Rigidbody[] bodies;
+    AudioSource audio;
     private void Awake()
     {
         bodies = GetComponentsInChildren<Rigidbody>();
+        audio = gameObject.GetComponent<AudioSource>();
+        audio.pitch = Random.Range(0.7f, 1.3f);
     }
     public void SetValues(float _explosionForce, float _explosionRadius, Vector3 _explosionPosition)
     {

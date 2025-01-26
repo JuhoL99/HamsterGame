@@ -107,6 +107,8 @@ MonoBehaviour:
     type: 3}
   explosionForce: 100
   explosionRadius: 10
+  breakVelocity: 10
+  breakSound: {fileID: 0}
 --- !u!54 &1998557442393959669
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -18,6 +18,9 @@ public class DestroyableObject : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         gameManager = GameManager.instance;
+
+        
+
     }
     private void FixedUpdate()
     {
@@ -31,7 +34,6 @@ public class DestroyableObject : MonoBehaviour
     }
     private void ExplodeObject(Collision collision, bool playerCaused = false)
     {
-        Debug.Log(playerCaused);
         destroyed = true;
         gameManager.ObjectDestroyed(this.transform);
         GameObject go = Instantiate(fractured, transform.position, transform.rotation * Quaternion.Euler(90, 0, 0)); //-90 x rotation from blender

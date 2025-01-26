@@ -155,3 +155,5 @@ MonoBehaviour:
     type: 3}
   explosionForce: 100
   explosionRadius: 10
+  breakVelocity: 10
+  breakSound: {fileID: 0}
