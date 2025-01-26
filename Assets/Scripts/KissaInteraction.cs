@@ -6,10 +6,15 @@ using UnityEngine;
 
 public class KissaInteraction : MonoBehaviour
 {
+    public DoorOpen doorOpenScript;
     bool playerInRange;
+    static bool questDone;
     bool inDialogue, dialogueEnded;
     public RectTransform dialoguePanel;
     TextMeshProUGUI kissaTextBox;
+    AudioSource audio;
+    GameObject goTalk;
+    static KissaInteraction instance;
     static int dialogueNum = 0;
     static string[] dialogue;
     static string[] startDialogue =
@@ -32,15 +37,25 @@ public class KissaInteraction : MonoBehaviour
         "I didn't think you'd have it in you, you little monster!",
         "Ugh... walking to the door is so troublesome. But, a deal is a deal. Go, be free! Spread your metaphorical wings!"
     };
+    void OpenDoor()
+    {
+        doorOpenScript.OpenDoor();
+    }
     void Start()
     {
+        if (instance == null) instance = this;
+        else Destroy(gameObject);
         kissaTextBox = dialoguePanel.GetComponentInChildren<TextMeshProUGUI>();
         dialogue = startDialogue;
+        audio = GetComponent<AudioSource>();
+        goTalk = transform.parent.GetChild(1).gameObject;
     }
     public static void QuestDone()
     {
         dialogue = endDialogue;
         dialogueNum = 0;
+        instance.goTalk.SetActive(true);
+        questDone = true;
     }
     void Update()
     {
@@ -68,17 +83,22 @@ public class KissaInteraction : MonoBehaviour
         GameManager.FreezeGame(false);
 
     }
+    
     void AdvanceDialogue()
     {
         if (dialogueNum >= dialogue.Length)
         {
             DisableDialogue();
+            instance.goTalk.SetActive(false);
+            if (questDone) OpenDoor();
             dialogueNum = 0;
             dialogueEnded = true;
         }
         else
         {
             kissaTextBox.text = dialogue[dialogueNum];
+            audio.pitch = Random.Range(0.7f, 1.3f);
+            audio.Play();
             dialogueNum++;
         }
         

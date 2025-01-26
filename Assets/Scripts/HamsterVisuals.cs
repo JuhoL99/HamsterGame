@@ -16,12 +16,17 @@ public class HamsterVisuals : MonoBehaviour
     Vector3 moveDir, moveAxis;
     Quaternion storedRotation;
     Quaternion targetRotation;
+    AudioSource rollAudio;
     void Start()
     {
         hamster = hamsterPivot.GetChild(0);
         ballRB = GetComponent<Rigidbody>();
         moveDir = Vector3.forward;
         moveAxis = Vector3.right;
+        AudioSource[] audioSources = GetComponents<AudioSource>();
+        rollAudio = audioSources[0];
+        rollAudio.Play();
+        rollAudio.Pause();
     }
     
     void Update()
@@ -29,6 +34,15 @@ public class HamsterVisuals : MonoBehaviour
         Vector3 horiAngleVelocity = ballRB.angularVelocity;
         horiAngleVelocity.y = 0;
         float horiAngleSpeed = horiAngleVelocity.magnitude;
+        if (horiAngleSpeed > 0.3)
+        {
+            rollAudio.UnPause();
+            rollAudio.volume = Mathf.InverseLerp(0.3f, 12f, horiAngleSpeed);
+        }
+        else
+        {
+            rollAudio.Pause();
+        }
         if (spinning)
         {
             hamster.localScale = new Vector3(1, 1 - Mathf.Clamp(horiAngleSpeed * 0.1f, 0f, 0.8f), 1);

@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     private List<Transform> destructibles = new List<Transform>();
     private int initialCount;
     static CinemachineFreeLook freeLook;
+    GameObject canvas;
 
     private void Awake()
     {
@@ -20,6 +21,7 @@ public class GameManager : MonoBehaviour
         else Destroy(gameObject);
         GameObject freeLookCameraObject = GameObject.Find("FreeLook Camera");
         if(freeLookCameraObject) freeLook = freeLookCameraObject.GetComponent<CinemachineFreeLook>();
+        canvas = GameObject.Find("Canvas");
     }
     private void Start()
     {
@@ -60,5 +62,11 @@ public class GameManager : MonoBehaviour
         Time.timeScale = isFrozen ? 0 : 1;
         freeLook.enabled = !isFrozen;
 
+    }
+    public void Victory()
+    {
+
+        FreezeGame(true);
+        canvas.transform.GetChild(2).gameObject.SetActive(true);
     }
 }
