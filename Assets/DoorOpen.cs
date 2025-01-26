@@ -9,6 +9,7 @@ public class DoorOpen : MonoBehaviour
     Quaternion targetRotation;
     public void OpenDoor()
     {
+        Debug.Log("Opened door");
         open = true;
     }
     void Start()
@@ -19,6 +20,10 @@ public class DoorOpen : MonoBehaviour
 
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.V))
+        {
+            OpenDoor();
+        }
         if (open)
         {
             hinge.rotation = Quaternion.Slerp(hinge.rotation, targetRotation, 0.2f);

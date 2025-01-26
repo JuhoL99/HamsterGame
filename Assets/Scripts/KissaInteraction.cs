@@ -59,6 +59,7 @@ public class KissaInteraction : MonoBehaviour
     }
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.P)) QuestDone();
         if (inDialogue && Input.GetKeyDown(KeyCode.F))
         {
             AdvanceDialogue();
