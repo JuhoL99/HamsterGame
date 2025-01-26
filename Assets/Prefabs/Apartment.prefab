@@ -3836,6 +3836,7 @@ GameObject:
   - component: {fileID: 5395341139912826082}
   - component: {fileID: 3452996012387241328}
   - component: {fileID: 6004939949124270741}
+  - component: {fileID: 4371715191324681543}
   m_Layer: 0
   m_Name: DoorOut
   m_TagString: Untagged
@@ -3931,6 +3932,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7775282300029752771, guid: 82bd8e99f506dc64c84f8850e7a4ced4, type: 3}
+--- !u!114 &4371715191324681543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8849614383318111725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f5781f16a8bed4595ad3395978450a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8851331193794767093
 GameObject:
   m_ObjectHideFlags: 0

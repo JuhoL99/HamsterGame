@@ -14,6 +14,7 @@ public class Movement : MonoBehaviour
     Transform hamsterPivot;
     Vector3 origPos;
     private bool onGround;
+    AudioSource jumpAudio;
 
     void Start()
     {
@@ -24,14 +25,13 @@ public class Movement : MonoBehaviour
         hamsterVisuals = GetComponent<HamsterVisuals>();
         hamsterPivot = hamsterVisuals.hamsterPivot;
         origPos = transform.position;
+
+        AudioSource[] audioSources = GetComponents<AudioSource>();
+        jumpAudio = audioSources[1];
     }
     private void LateUpdate()
     {
         cameraFollow.position = transform.position;
-    }
-    void EnableHamsterRB()
-    {
-       
     }
     private void Update()
     {
@@ -40,11 +40,15 @@ public class Movement : MonoBehaviour
         {
             controlLostTimer -= Time.deltaTime;
         }
-        print(Physics.Raycast(transform.position, Vector3.down, 2.5f));
+
+        //Jump
         if (Input.GetKeyDown(KeyCode.Space) && Physics.Raycast(transform.position, Vector3.down, 2.5f))
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            jumpAudio.Play();
         }
+
+        //ResetPos
         if (Input.GetKeyDown(KeyCode.R))
         {
             transform.position = origPos;
