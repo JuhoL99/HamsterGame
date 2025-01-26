@@ -5,13 +5,15 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public Transform cameraFollow;
-    public float torque, loseControlAngleSpeed, regainControlAngleSpeed, controlLostTime;
+    public float torque, loseControlAngleSpeed, regainControlAngleSpeed, controlLostTime, jumpForce;
     Rigidbody rb;
     Camera cam;
     HamsterVisuals hamsterVisuals;
     bool inControl = true;
     float controlLostTimer = 0f;
     Transform hamsterPivot;
+    Vector3 origPos;
+    private bool onGround;
 
     void Start()
     {
@@ -21,6 +23,7 @@ public class Movement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         hamsterVisuals = GetComponent<HamsterVisuals>();
         hamsterPivot = hamsterVisuals.hamsterPivot;
+        origPos = transform.position;
     }
     private void LateUpdate()
     {
@@ -32,14 +35,26 @@ public class Movement : MonoBehaviour
     }
     private void Update()
     {
+
         if (controlLostTimer > 0f)
         {
             controlLostTimer -= Time.deltaTime;
         }
-
+        print(Physics.Raycast(transform.position, Vector3.down, 2.5f));
+        if (Input.GetKeyDown(KeyCode.Space) && Physics.Raycast(transform.position, Vector3.down, 2.5f))
+        {
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            transform.position = origPos;
+        }
     }
+    
     void FixedUpdate()
     {
+
+
         Vector2 inputDir = new Vector2(Input.GetAxis("Horizontal"),Input.GetAxis("Vertical"));
         float angleSpeed = rb.angularVelocity.magnitude;
         
@@ -66,4 +81,5 @@ public class Movement : MonoBehaviour
         Vector3 moveTorqueAxis = Vector3.Cross(Vector3.up, moveDir);
         if (moveDir.magnitude > 0.01f) rb.AddTorque(moveTorqueAxis*Time.fixedDeltaTime*torque);
     }
+    
 }

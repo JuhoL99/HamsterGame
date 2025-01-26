@@ -18,13 +18,17 @@ public class GameManager : MonoBehaviour
     {
         if(instance == null) instance = this;
         else Destroy(gameObject);
-        freeLook = GameObject.Find("FreeLook Camera").GetComponent<CinemachineFreeLook>();
+        GameObject freeLookCameraObject = GameObject.Find("FreeLook Camera");
+        if(freeLookCameraObject) freeLook = freeLookCameraObject.GetComponent<CinemachineFreeLook>();
     }
     private void Start()
     {
-        destructibles.AddRange(destructibleParent.GetComponentsInChildren<Transform>());
-        destructibles.Remove(destructibleParent);
-        initialCount = destructibles.Count;
+        if (destructibleParent)
+        {
+            destructibles.AddRange(destructibleParent.GetComponentsInChildren<Transform>());
+            destructibles.Remove(destructibleParent);
+            initialCount = destructibles.Count;
+        }
     }
     public void ObjectDestroyed(Transform _object)
     {
