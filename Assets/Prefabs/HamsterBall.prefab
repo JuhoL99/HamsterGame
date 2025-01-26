@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 6115713990422241883}
   - component: {fileID: 5280521744097779728}
   - component: {fileID: 3339355336661678487}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: HamsterBall
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,6 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   angleMax: 45
   speedReachMaxAngle: 6
+  anim: {fileID: 0}
   hamsterPivot: {fileID: 0}
 --- !u!114 &3339355336661678487
 MonoBehaviour:
@@ -164,5 +165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraFollow: {fileID: 0}
   torque: 1000
-  loseControlAngleSpeed: 1
-  regainControlAngleSpeed: 0.5
+  loseControlAngleSpeed: 4
+  regainControlAngleSpeed: 1.5
+  controlLostTime: 0.5
+  jumpForce: 8
